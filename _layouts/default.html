@@ -12,7 +12,9 @@
       github: {
         owner_name: '{{ site.github.owner_name }}',
         repository_name: '{{ site.github.repository_name }}',
-        branch: '{{ site.github.source.branch }}'
+        source: {
+          branch: '{{ site.github.source.branch }}'
+        }
       }
     },
     page: {
