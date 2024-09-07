@@ -6,7 +6,22 @@
 <link rel="apple-touch-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Website_logo_1.png/240px-Website_logo_1.png">
 
 <script>
-  window.jekyll={ site: {{site|jsonify}}, page: {{page|jsonify}}, content: {{content|jsonify}} }
+  window.jekyll = {
+    site: {
+      baseurl: '{{ site.baseurl }}',
+      github: {
+        owner_name: '{{ site.github.owner_name }}',
+        repository_name: '{{ site.github.repository_name }}',
+        branch: '{{ site.github.source.branch }}'
+      }
+    },
+    page: {
+      path: '{{ page.path }}',
+      dir: '{{ page.dir }}',
+      name: '{{ page.name }}'
+    },
+    content: '{{ content }}'
+  }
   window.options = `
   baseurl: '{{ site.baseurl }}'
   title: Kent Maps Online
