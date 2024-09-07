@@ -20,7 +20,7 @@
       dir: '{{ page.dir }}',
       name: '{{ page.name }}'
     },
-    content: '{{ content }}'
+    content: '{{content|jsonify}}'
   }
   window.options = `
   baseurl: '{{ site.baseurl }}'
